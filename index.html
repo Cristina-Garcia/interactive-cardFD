@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Card</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="window">
+      <div class="margin"></div>
+      <div class="card">
+        <div class="card-front">
+          <img src="./images/card-logo.svg" alt="card-logo" />
+          <h2>0000 0000 0000 0000</h2>
+          <div class="card-user">
+            <p>JANE APPLESEED</p>
+            <p>00/00</p>
+          </div>
+        </div>
+        <div class="card-back"></div>
+        <div class="card-form">
+          <form action="/signup">
+            <p>
+              <label for="">CARDHOLDER NAME </label><br />
+              <input type="text" placeholder="e.g. Jane Applessed" />
+            </p>
+            <p>
+              <label for=""> CARD NUMBER</label><br />
+              <input type="number" placeholder=" e.g. 0000 0000 0000 0000" />
+            </p>
+            <p>
+              <label for="">EXP. DATE(MM/YY) CVC</label><br />
+              <input type="date" />
+            </p>
+          </form>
+          <button class="buttom-confirm">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

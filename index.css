@@ -1,0 +1,47 @@
+@import "./styles.css";
+@import "./card-form.css";
+@import "./card-front.css";
+
+.window {
+  font-family: "Space Grotesk", sans-serif;
+  height: 100vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 100%;
+  grid-template-areas: "margin" "card";
+
+  position: relative;
+  overflow-y: hidden;
+}
+
+.margin {
+  background-image: url("./images/bg-main-desktop.png");
+  grid-area: margin;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+@media (max-width: 375px) {
+  .window {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+    grid-template-areas:
+      "margin"
+      "card";
+  }
+  .margin {
+    grid-area: margin;
+  }
+  .card {
+    grid-area: card;
+  }
+  .card-form {
+    display: flex;
+    inline-size: 100%;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
