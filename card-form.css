@@ -1,10 +1,14 @@
+.card {
+  display: grid;
+}
 .card-form {
   width: 400px;
   height: 600px;
-  position: relative;
-  bottom: 350px;
-  left: 200px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
 }
+
 .card-form form {
   display: flex;
   flex-direction: column;

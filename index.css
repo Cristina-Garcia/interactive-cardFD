@@ -8,11 +8,11 @@
   width: 100%;
 
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 40% 1fr;
   grid-template-rows: 100%;
   grid-template-areas: "margin" "card";
 
-  position: relative;
+  position: absolute;
   overflow-y: hidden;
 }
 
@@ -22,26 +22,70 @@
   background-repeat: no-repeat;
   height: 100vh;
 }
+.window .card {
+  grid-area: card;
+}
 
-@media (max-width: 375px) {
+@media (max-width: 700px) {
   .window {
     display: grid;
+
     grid-template-columns: 100%;
-    grid-template-rows: 40% 60%;
+    grid-template-rows: 40% 1fr;
     grid-template-areas:
       "margin"
       "card";
+    flex-direction: column;
+    position: absolute;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
   }
   .margin {
     grid-area: margin;
+    height: 100%;
+
+    background-image: url("./images/bg-main-mobile.png");
+    background-size: 100%;
   }
   .card {
     grid-area: card;
   }
   .card-form {
     display: flex;
-    inline-size: 100%;
-    justify-content: center;
+
     flex-direction: column;
+
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  .card-front {
+    display: flex;
+    width: 360px;
+    background-size: 360px;
+
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 1;
+  }
+  .card-front h2 {
+    letter-spacing: 0;
+  }
+  .card-user .user {
+    padding-inline: 18px;
+    padding-block: 0;
+  }
+  .card-user {
+    top: 45%;
+  }
+  .card-back {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+
+    background-size: 360px;
+    min-width: 360px;
   }
 }
